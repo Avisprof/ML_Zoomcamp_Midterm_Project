@@ -7,6 +7,7 @@ The purpose of this project is to create a model which will predict total sales 
 The growth of supermarkets in most populated cities are increasing and market competitions are also high. The dataset is one of the historical sales of supermarket company which has recorded in 3 different branches for 3 months data.
 
 You can get this dataset from [kaggle](https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales)
+Or from this [link](https://github.com/Avisprof/ML_Zoomcamp_Midterm_Project/blob/main/supermarket_sales.csv)
 
 ## 3. About files and folders in this repo
 
@@ -28,7 +29,18 @@ In time series data we wish to predict some variable given only a trailing windo
 In this model used [lag_1, lag_2, lag_3, lag_4, lag_5] features, which contains sales data for previous weeks
 
 ## 5. How to reproduce the project
-
+Clone this repo in your local machine with the command:
+```
+git clone https://github.com/Avisprof/ML_Zoomcamp_Midterm_Project.git
+```
+If you haven't installed `pipenv` yet, you need to do it with:
+```
+pip install pipenv
+```
+Then you can recreate the environment by running the below command in the project directory:
+```
+pipenv install
+```
 
 ## 6. Local deployment of the model
 Thist model can be deployed locally using Docker and the following commands
@@ -37,5 +49,7 @@ docker build -t kaggle_superstore .
 docker run -it --rm -p 9696:9696 kaggle_superstore
 ```
 
-For the predict 
+For the predict feature sales run script by the following command:
+```
 python predict_test.py
+```
